@@ -102,7 +102,7 @@ const login = () => {
         <div className="absolute inset-0 bg-black/60"></div>{" "}
         {/* Overlay to make the background image appear thicker */}
         <div className="relative flex w-full h-full">
-          <div className="bg-[green]/70 text-[#FFFFFF] hidden md:w-1/2 h-full sm:flex justify-center items-center">
+          <div className="bg-[green]/70 text-[#FFFFFF] hidden md:w-1/2 h-full md:flex justify-center items-center">
             {" "}
             {/* Adjusted opacity */}
             <div className="pl-28 pr-14">
@@ -115,11 +115,11 @@ const login = () => {
             </div>
           </div>
           <div className="bg-[#D9D9D9]/70 w-full md:w-1/2 h-full flex justify-center items-center">
-            <div className="bg-white rounded-xl py-16 px-10">
-              <h1 className="text-3xl font-bold text-[#00A651] py-4">
+            <div className="bg-white h-[85vh] rounded-xl py-10 px-10">
+              <h1 className=" text-lg lg:text-2xl font-bold text-[#00A651]">
                 Welcome Back!
               </h1>
-              <p className="text-xl pb-7">
+              <p className="text-sm lg:text-xl pb-7">
                 Track your logistics with <b>SpruceXpress</b>
               </p>
               <form>
@@ -131,10 +131,9 @@ const login = () => {
                   type="email"
                   name="mail"
                   id="mail"
-                  className="w-full border text-lg p-2"
+                  className="w-full border text-sm lg:text-lg p-2 mb-2"
                   placeholder="Enter your email"
                 />
-                <br />
                 <br />
                 <label htmlFor="password">
                   <b>password</b>
@@ -142,7 +141,7 @@ const login = () => {
                 <br />
                 <input
                   type="text"
-                  className="w-full border text-lg p-2"
+                  className="w-full border text-sm lg:text-lg p-2"
                   id="password"
                   placeholder="•••••••••"
                 />
@@ -157,12 +156,12 @@ const login = () => {
                   </div>
                 </div>
                 <Link to={"/welcome"}>
-                  <button className="w-full items-center bg-[#00A651] text-white rounded-xl py-3 text-xl font-bold ">
+                  <button className="w-full items-center bg-[#00A651] text-white rounded-xl my-3 py-3 text-sm lg:text-xl font-bold ">
                     Sign in
                   </button>
                 </Link>
               </form>
-              <button className="w-full flex justify-center items-center bg-[#353535] mt-4 text-white rounded-xl gap-2 mb-4 py-3 text-xl font-semibold">
+              <button className="w-full flex justify-center items-center bg-[#353535] mt-4 text-white rounded-xl gap-2 mb-4 py-3 text-sm lg:text-xl font-semibold">
                 <img src={google} alt="" />
                 <p>Or continue with Google</p>
               </button>

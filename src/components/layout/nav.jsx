@@ -2,7 +2,6 @@
 // import { logo } from "../../images/index.js";
 // import { Link } from "react-router-dom";
 
-
 // function NavBar() {
 //   const [isOpen, setIsOpen] = useState(false);
 
@@ -119,8 +118,6 @@
 //   );
 // }
 
-
-
 import React, { useState } from "react";
 import { logo } from "../../images/index.js";
 import { Link } from "react-router-dom";
@@ -206,45 +203,37 @@ function NavBar() {
         >
           &times;
         </button> */}
-        <Link
-          to="/"
-          className="hover:text-[#4BA586] text-[#8E8E8E] text-lg"
-        >
+        <Link to="/" className="hover:text-[#4BA586] text-[#8E8E8E] hover:pb-3 text-lg">
           Home
         </Link>
-        <Link
-          to="/property"
-          className="hover:text-[#4BA586] text-[#8E8E8E] text-lg"
-        >
-          Property
-        </Link>
+
         <Link
           to="/AboutUs"
-          className="hover:text-[#4BA586] text-[#8E8E8E] text-lg"
+          className="hover:text-[#4BA586] hover:pb-3 text-[#8E8E8E] text-lg"
         >
           About
         </Link>
         <Link
           to="/OurService"
-          className="hover:text-[#4BA586] text-[#8E8E8E] text-lg"
+          className="hover:text-[#4BA586] hover:pb-3 text-[#8E8E8E] text-lg"
         >
           Service
         </Link>
         <Link
           to="/contact"
-          className="hover:text-[#4BA586] text-[#8E8E8E] text-lg"
+          className="hover:text-[#4BA586] hover:pb-3 text-[#8E8E8E] text-lg"
         >
           Contact
         </Link>
         <Link
           to="/signin"
-          className="hover:text-[#4BA586] text-[#8E8E8E] text-lg"
+          className="hover:text-[#4BA586] hover:pb-3 text-[#8E8E8E] text-lg"
         >
           Sign-in
         </Link>
         <Link
           to="/login"
-          className="hover:text-[#4BA586] text-[#8E8E8E] text-lg"
+          className="hover:text-[#4BA586] hover:pb-3 text-[#8E8E8E] text-lg"
         >
           Login
         </Link>
