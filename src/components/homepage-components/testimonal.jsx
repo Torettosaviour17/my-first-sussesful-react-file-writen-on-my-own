@@ -10,7 +10,7 @@ const testimonal = () => {
     <div>
       <section>
         <div className="flex justify-center items-center">
-          <h1 className="bg-[#00A651] px-2 py-2 hover:bg-white hover:text-[#00A651] my-8 text-white text-4xl font-bold ">
+          <h1 className="bg-[#00A651]  px-2 py-2 my-8 text-white text-xl md:text-3xl hover:bg-white hover:text-[#00A651] font-bold ">
             Testimonials
           </h1>
         </div>
@@ -24,7 +24,7 @@ const testimonal = () => {
               </span>
               <img className="hidden md:inline" src={greenhy} alt="" />
             </div>
-            <p>
+            <p className="my-6">
               <i>
                 I run a small online boutique. And Spruce Xpress has been a game
                 changer for my business. Their reliable delivery services
@@ -33,7 +33,11 @@ const testimonal = () => {
               </i>
             </p>
             <div>
-              <img src={star} alt="" />
+              <img
+                className="scale-50 sm:scale-75 md:scale-95"
+                src={star}
+                alt=""
+              />
             </div>
           </div>
           <div className="bg-[#00A651] px-10 py-5 mb-6 md:mb-auto">
@@ -45,13 +49,20 @@ const testimonal = () => {
               </span>
               <img className="hidden md:inline" src={whitehy} alt="" />
             </div>
-            <p>
+            <p className="my-6">
               <i>
-              When I need something fast, Spruce Xpress is my go to. Their same day delivery option is a life saver. I have used them for everything from forgotten anniversary gifts, to last minute party supplies. They’ve never let me down.
+                When I need something fast, Spruce Xpress is my go to. Their
+                same day delivery option is a life saver. I have used them for
+                everything from forgotten anniversary gifts, to last minute
+                party supplies. They’ve never let me down.
               </i>
             </p>
             <div>
-              <img src={star} alt="" />
+              <img
+                className="scale-50 sm:scale-75 md:scale-95"
+                src={star}
+                alt=""
+              />
             </div>
           </div>
         </div>
