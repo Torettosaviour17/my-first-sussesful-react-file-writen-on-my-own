@@ -8,16 +8,16 @@ const ourService = () => {
     <div>
       <section>
         <div className="flex justify-center items-center">
-          <h1 className="bg-[#00A651] px-2 hover:bg-white hover:text-[#00A651] py-2 my-8 text-white text-4xl font-bold ">
+          <h1 className="bg-[#00A651]  px-2 py-2 my-8 text-white text-xl md:text-3xl hover:bg-white hover:text-[#00A651] font-bold">
             our services
           </h1>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 p-10 md:px-28">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 p-10 md:px-28">
           <div className="rounded-xl border">
             <div className="flex items-center justify-center py-10">
-              <img src={bike} alt="" />
+              <img className="scale-50 sm:scale-75 md:scale-95" src={bike} alt="" />
             </div>
-            <h1 className="text-[#00A651] text-4xl font-bold text-center">
+            <h1 className="text-[#00A651] text-2xl md:text-3xl font-bold text-center">
               BIKE
             </h1>
             <p className="text-center p-8">
@@ -29,9 +29,9 @@ const ourService = () => {
           </div>
           <div className="rounded-xl border">
             <div className="flex items-center justify-center py-10">
-              <img src={truck} alt="" />
+              <img className="scale-50 sm:scale-75 md:scale-95" src={truck} alt="" />
             </div>
-            <h1 className="text-[#00A651] text-4xl font-bold text-center">
+            <h1 className="text-[#00A651] text-2xl md:text-3xl font-bold text-center">
               Truck
             </h1>
             <p className="text-center p-8">
@@ -43,9 +43,9 @@ const ourService = () => {
           </div>
           <div className="rounded-xl border">
             <div className="flex items-center justify-center py-10">
-              <img src={airplane} alt="" />
+              <img className="scale-50 sm:scale-75 md:scale-95" src={airplane} alt="" />
             </div>
-            <h1 className="text-[#00A651] text-4xl font-bold text-center">
+            <h1 className="text-[#00A651] text-2xl md:text-3xl font-bold text-center">
               airplane
             </h1>
             <p className="text-center p-8">
