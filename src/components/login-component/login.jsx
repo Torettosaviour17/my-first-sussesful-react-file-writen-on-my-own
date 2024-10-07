@@ -115,7 +115,7 @@ const login = () => {
             </div>
           </div>
           <div className="bg-[#D9D9D9]/70 w-full md:w-1/2 h-full flex justify-center items-center">
-            <div className="bg-white h-[85vh] rounded-xl py-10 px-10">
+            <div className="bg-white rounded-xl py-10 px-10">
               <h1 className=" text-lg lg:text-2xl font-bold text-[#00A651]">
                 Welcome Back!
               </h1>
