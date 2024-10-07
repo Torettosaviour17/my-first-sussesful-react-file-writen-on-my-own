@@ -102,11 +102,11 @@ const login = () => {
         <div className="absolute inset-0 bg-black/60"></div>{" "}
         {/* Overlay to make the background image appear thicker */}
         <div className="relative flex w-full h-full">
-          <div className="bg-[#00A651]/70 text-[#FFFFFF] w-1/2 h-full flex justify-center items-center">
+          <div className="bg-[green]/70 text-[#FFFFFF] hidden md:w-1/2 h-full sm:flex justify-center items-center">
             {" "}
             {/* Adjusted opacity */}
             <div className="pl-28 pr-14">
-              <h1 className="text-4xl font-bold pb-5">
+              <h1 className="text-[24px] leading-[40px] lg:text-[40px] font-bold pb-5">
                 Your Logistics Partner For Seamless Delivery.
               </h1>
               <p className="text-2xl">
@@ -114,7 +114,7 @@ const login = () => {
               </p>
             </div>
           </div>
-          <div className="bg-[#D9D9D9]/70 w-1/2 h-full flex justify-center items-center">
+          <div className="bg-[#D9D9D9]/70 w-full md:w-1/2 h-full flex justify-center items-center">
             <div className="bg-white rounded-xl py-16 px-10">
               <h1 className="text-3xl font-bold text-[#00A651] py-4">
                 Welcome Back!
@@ -156,8 +156,10 @@ const login = () => {
                     <p>Forgot Password?</p>
                   </div>
                 </div>
-                <Link to={"/welcome"} className="w-full items-center bg-[#00A651] text-white rounded-xl py-3 text-xl font-bold">
-                  Sign in
+                <Link to={"/welcome"}>
+                  <button className="w-full items-center bg-[#00A651] text-white rounded-xl py-3 text-xl font-bold ">
+                    Sign in
+                  </button>
                 </Link>
               </form>
               <button className="w-full flex justify-center items-center bg-[#353535] mt-4 text-white rounded-xl gap-2 mb-4 py-3 text-xl font-semibold">

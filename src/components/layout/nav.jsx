@@ -1,45 +1,130 @@
-import React from "react";
+import React, { useState } from "react";
 import { logo } from "../../images/index.js";
 import { Link } from "react-router-dom";
 
-function navBar() {
+
+function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav className="flex justify-between items-center px-8 py-4">
+    <nav className="flex justify-between items-center px-8 py-4 relative">
       <div>
-        <img src={logo} alt="" className="scale-75 sm:scale-95" />
+        <img src={logo} alt="Logo" className="scale-75 sm:scale-95" />
       </div>
+      {/* Desktop Navigation */}
       <div>
         <ul className="hidden md:flex justify-between gap-6">
           <li className="text-xl hover:scale-90 hover:font-bold hover:text-green-900">
-            Home
+            <Link to={"/"}>Home</Link>
           </li>
           <li className="text-xl hover:scale-90 hover:font-bold hover:text-green-900">
-            About
+            <Link to={"/AboutUs"}>About</Link>
           </li>
           <li className="text-xl hover:scale-90 hover:font-bold hover:text-green-900">
-            Services
+            <Link to={"/OurService"}>Services</Link>
           </li>
           <li className="text-xl hover:scale-90 hover:font-bold hover:text-green-900">
             Contact Us
           </li>
         </ul>
       </div>
-      <div className="space-x-5 hidden xl:inline">
-        <Link to={"/login"} className="bg-[#00A651] hover:text-[#00A651] px-10 py-4 rounded-xl text-lg text-white hover:bg-white border">
+      {/* Desktop Login/Sign In Buttons */}
+      <div className="space-x-5 hidden md:inline">
+        <Link
+          to={"/login"}
+          className="bg-[#00A651] hover:text-[#00A651] px-10 py-4 rounded-xl text-lg text-white hover:bg-white border"
+        >
           Login
         </Link>
-        <Link to={"/signin"} className="px-14 py-4 rounded-xl text-lg border hover:bg-[#00A651] hover:text-white">
+        <Link
+          to={"/signin"}
+          className="px-14 py-4 rounded-xl text-lg border hover:bg-[#00A651] hover:text-white"
+        >
           Create Account
         </Link>
-        {/* <Link
-          to={"/product"}
-          className="block text-white py-2 md:py-0 md:px-2 hover:text-gray-400"
+      </div>
+      {/* Hamburger Menu Button */}
+      <button
+        id="menu-btn"
+        className={`block md:hidden focus:outline-none ${isOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
+        <div className="w-6 h-6 flex flex-col justify-between items-center">
+          <span
+            className={`block w-full h-[3px] bg-black transition-transform duration-300 ${
+              isOpen ? "transform rotate-45 translate-y-[9px]" : ""
+            }`}
+          ></span>
+          <span
+            className={`block w-full h-[3px] bg-black transition-opacity duration-300 ${
+              isOpen ? "opacity-0" : ""
+            }`}
+          ></span>
+          <span
+            className={`block w-full h-[3px] bg-black transition-transform duration-300 ${
+              isOpen ? "transform -rotate-45 -translate-y-[9px]" : ""
+            }`}
+          ></span>
+        </div>
+      </button>
+      {/* Mobile Navigation */}
+      <div
+        id="menu"
+        className={`${
+          isOpen ? "flex" : "hidden"
+        } flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto left-0 right-0 mx-6 drop-shadow-md md:hidden`}
+      >
+        <Link
+          to="/"
+          className="hover:text-[#4BA586] text-[#8E8E8E] hover:scale-y-125 hover:pb-3"
         >
-          Product
-        </Link> */}
+          Home
+        </Link>
+        <Link
+          to="/AboutUs"
+          className="hover:text-[#4BA586] text-[#8E8E8E] hover:scale-y-125 hover:pb-3"
+        >
+          About
+        </Link>
+        <Link
+          to="/OurService"
+          className="hover:text-[#4BA586] text-[#8E8E8E] hover:scale-y-125 hover:pb-3"
+        >
+          Services
+        </Link>
+        <Link
+          to="/contact"
+          className="hover:text-[#4BA586] text-[#8E8E8E] hover:scale-y-125 hover:pb-3"
+        >
+          Contact Us
+        </Link>
+        <Link
+          to="/login"
+          className="hover:text-[#4BA586] text-[#8E8E8E] hover:scale-y-125 hover:pb-3"
+        >
+          Login
+        </Link>
+        <Link
+          to="/signin"
+          className="hover:text-[#4BA586] text-[#8E8E8E] hover:scale-y-125 hover:pb-3"
+        >
+          Create Account
+        </Link>
       </div>
     </nav>
   );
 }
 
-export default navBar;
+export default NavBar;
+
+
+
+
+
+
+
+

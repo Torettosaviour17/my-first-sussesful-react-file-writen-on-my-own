@@ -63,6 +63,10 @@ import Login from "./components/login-component/login";
 import Signin from "./components/signin-component/signin";
 import Welcome from "./components/welcome-component/welcome";
 import NotFound from "./components/NotFound"; // Ensure this path is correct
+import AboutUs from "./components/homepage-components/aboutUs";
+import OurService from "./components/homepage-components/ourService";
+
+
 
 function App() {
   return (
@@ -73,6 +77,8 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/welcome" element={<Welcome />} />
         <Route path="*" element={<NotFound />} /> {/* Fallback route */}
+        <Route path="/AboutUS" element={<AboutUs />} />
+        <Route path="/OurService" element={<OurService />} />
       </Routes>
     </BrowserRouter>
   );

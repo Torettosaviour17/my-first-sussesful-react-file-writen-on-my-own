@@ -6,7 +6,7 @@ import { heroBackground } from '../../images/index'
 const heropage = () => {
   return (
     <div>
-      <section style={{ backgroundImage: `url(${heroBackground})` }} className='bg-no-repeat bg-cover bg-center object-cover flex p-10  justify-around items-center bg-[#00A651] px-12 py-3 w-[100%] space-x-4'>
+      <section style={{ backgroundImage: `url(${heroBackground})` }} className='bg-no-repeat bg-cover bg-center object-cover flex p-10  justify-around items-center bg-[green] px-12 py-3 w-[100%] space-x-4'>
         <div className='md:w-1/2 w-full text-center md:text-left'>
             <h1 className='text-white text-5xl font-bold'>
             Your Logistics Partner For Seamless Delivery.
